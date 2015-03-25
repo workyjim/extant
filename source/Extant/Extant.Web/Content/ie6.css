@@ -1,0 +1,34 @@
+﻿ul.arrowed li
+{
+	zoom: 1;	
+}
+
+ul.iconed-list li
+{
+	zoom: 1;
+}
+
+ul.deletable-list li
+{
+	zoom: 1;
+}
+
+table.data-items
+{
+	width: 460px;	
+}
+
+.box-orange-border .boxbottomleft 
+{
+	width: 229px;
+}
+
+div#study-update
+{
+	top: 0;
+}
+
+span#last-updated
+{
+	vertical-align: top;
+}

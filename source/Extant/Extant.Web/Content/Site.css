@@ -1,0 +1,996 @@
+﻿/*
+ * Site wide CSS
+ */
+
+/************************************** RESETS **************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+img{
+	border:0;
+}
+
+/* Pre-requisites */ 
+fieldset { margin: 0 0 10px 0; clear: both; border: none; }
+input { border: solid thin lightgrey; margin: 5px 0; height:18px; width: 200px;}
+legend { color:#333; }
+option { padding: 0 5px; }
+select { border: solid thin lightgrey; margin: 5px 0; }
+table { margin:0 0 10px 0; border:0px; }
+td { padding:0 15px 3px 0; border:0px; }
+textarea { margin:5px 0; border: solid thin lightgrey; }
+p { padding-bottom: 15px; }
+ul { margin: 0 0 15px 20px; }
+ul li { padding-bottom: 15px; }
+
+
+/************************************** Layout **************************************/
+
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+#header {
+	float:left;
+	width:100%;
+}
+#page-body{
+	float:left;
+	width:100%;
+	position: relative;
+	margin: -17px 0 20px 0;
+}
+#footer {
+	clear:both;
+	float:left;
+	width:100%;
+	background:#333;
+	margin-top:20px;
+}
+
+/************************************** Fonts ********************************************/
+
+body{
+	font-family:arial,verdana,sans-serif;
+	font-size:80%;
+	color:#333;
+}
+a{
+	color:#C8400E;
+	text-decoration:none;
+}
+a:hover, a:active, a:focus{
+	text-decoration:underline;
+	color:#C8400E;
+}
+h1{
+	font-size:200%;
+	margin-bottom:15px;
+	color: #C8400E;
+}
+h2{
+	font-size:140%;
+	margin-bottom:10px;
+	color: #333;
+}
+h3{
+	font-size:130%;
+	margin-bottom:10px;
+	color: #333;
+}
+h4{
+	font-size:120%;
+	margin-bottom:10px;
+	color: #333;
+}
+
+H4.related-info-header {
+	color : #fff;
+}
+
+h5{
+	font-size:105%;
+	margin-bottom:10px;
+	color: #333;
+}
+h6{
+	font-size:100%;
+	margin-bottom:10px;
+	color: #333;
+}
+
+/************************************** Header Components ***************************************/
+
+#header
+{
+	height: 215px;
+}
+
+#topnav{
+	float:left;
+	background-color:#333333;
+	width:956px;
+	height:38px;
+	border-radius: 0px 0px 5px 5px; 
+	-moz-border-radius: 0px 0px 5px 5px; 
+	-webkit-border-radius: 0px 0px 5px 5px; 
+	border: 2px solid #333333;
+}
+#topnav ul{
+	float:left;
+	width:945px;
+	margin:0 5px;
+}
+#topnav ul li{
+	float:left;
+	color:#fff;
+	list-style-type:none;
+	padding: 0;
+}
+#topnav ul li a{
+	float:left;
+	color:#fff;
+	font-size:16px;
+	font-weight:bold;
+	padding:10px 10px 8px 10px;
+	display:block;
+}
+#topnav ul li a:hover, #topnav ul li .active{
+	float:left;
+	color:#fff;
+	background:#C8400E;
+}
+
+#topnav ul li.right
+{
+	float: right;
+}
+
+
+
+.main-logo{
+	float:left;	
+}
+
+.main-logo h1
+{
+	margin: 15px 0 0 0;	
+}
+
+
+/*************** Box 3 *****************/
+.box-orange-border {
+	width: 100%; padding: 0 0 20px 0;
+}
+
+.box-orange-border a {
+	color:#C8400E;
+}
+
+.box-orange-border a:hover, a:active, a:focus{
+	text-decoration:underline;
+	color:#C8400E;
+}
+
+.box-orange-border .boxcontent {
+	margin: 0 0 0 0;
+	padding:0 0 10px 0;
+	color:#C8400E;
+}
+.box-orange-border .boxcontent ul {
+	list-style-type:none;
+}
+.box-orange-border .boxtopleft {
+	display: block;
+	background: url("/Images/box-orange-border.gif") top left no-repeat white;
+	padding: 1.0em 0em 0em 1.0em;
+}
+.box-orange-border .boxtopright {
+	display: block;
+	background: url("/Images/box-orange-border.gif") top right no-repeat white;
+	padding: 1.0em 1.0em 0 0;
+	margin: -1.0em 0 0 0;
+}
+.box-orange-border .boxbottomleft {
+	display: block;
+	height: 25px;
+	margin-top: -1.0em;
+	background: url("/Images/box-orange-border.gif") bottom left no-repeat white;
+}
+.box-orange-border .boxbottomright {
+	display: block;
+	background: url("/Images/box-orange-border.gif") bottom right no-repeat white;
+	height: 25px;
+	margin-left: 3.0em;
+}
+.box-orange-border .boxcontent h3{
+	color:#C8400E;
+}
+/*************** END Box 3 *****************/
+
+/************************************** Extant Collection Styles ***************************************/
+
+#page-body h2
+{
+	margin-right: 50px;	
+	padding-top: 4px;
+}
+
+/* windows */
+.window 
+{
+    border: 1px solid #d3d3d3;
+    margin-bottom: 15px;
+}
+
+.window .window-title
+{
+	height:30px; 
+	line-height:30px;
+	padding: 0 15px;
+	margin: -1px;
+	position: relative;
+}
+
+.window .window-title img.remove-detailed
+{
+	position: absolute;
+	right: 5px;
+	top: 7px;
+}
+
+.window .window-body
+{
+	padding: 15px; 
+}
+
+.clear { 
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* forms */
+
+.form-row
+{
+	clear: both;
+	overflow: hidden;
+	width: 100%;
+}
+
+.form-row label
+{
+	margin: 5px 20px 5px 0; 
+	padding: 3px 0 0 0; 
+	float: left;
+}
+
+.form-row span
+{
+	margin: 5px 10px 5px 0; 
+	padding: 3px 0 0 0; 
+	float: left;
+}
+
+.form-row span.label
+{
+	margin-right: 20px;	
+}
+
+.form-row button span
+{
+	margin: 0;	
+}
+
+.form-row span span, .form-row label span
+{
+	float: none;
+	margin: 0;
+	padding: 0;	
+}
+
+.form-row input, .form-row select, .form-row textarea
+{
+	margin-right: 10px;	
+	float: left;
+}
+
+.form-row input.check
+{
+	margin: 7px 10px 0 2px;	
+}
+
+.form-row button
+{
+	margin: 4px 10px 1px 0;
+	float: left;	
+}
+
+.form-row img, .form-row .image
+{
+	margin: 5px 5px 0 0;	
+	float: left;
+	vertical-align: middle;
+	border: none;
+}
+
+.form-row img.sixteenpx
+{
+	margin-top: 9px;
+}
+
+.form-row span img
+{
+	margin-top: 0;
+	float: none;	
+}
+
+.form-row div.multi-row
+{
+	float: left;	
+}
+
+.form-row div.radio-holder
+{
+	padding-top: 3px;
+	float: left;	
+}
+
+.form-row span.help-icon
+{
+	margin-top: 7px;	
+}
+
+.radio-row
+{
+	clear: both;
+	overflow: hidden;
+	width: 100%;
+}
+
+.radio-row label
+{
+	margin: 1px 20px 2px 0; 
+	padding: 3px 0 0 0; 
+	float: left;
+}
+
+.radio-row input
+{
+	margin: 3px 10px 0 0;	
+	float: left;
+}
+
+label.fullwidth
+{
+	width: auto !important;	
+}
+
+label.extranarrow, .extranarrow label
+{
+	width: 55px;
+}
+
+label.narrow, .narrow label
+{
+	width: 100px;
+}
+
+label.medium, .medium label
+{
+	width: 150px;
+}
+
+label.wide, .wide label
+{
+	width: 200px;
+}
+
+label.extrawide, .extrawide label
+{
+	width: 300px;
+}
+
+label.xxwide, .xxwide label
+{
+	width: 400px;
+}
+
+label.xxxwide, .xxxwide label
+{
+	width: 500px;
+}
+
+label.trailing
+{
+	width: auto;
+}
+
+label.disabled
+{
+	color: #aaaaaa;	
+}
+
+span.required
+{
+	color: #cc0000;
+	font-weight: bold;
+}
+
+label span.required
+{
+	float: none;	
+	margin: 0;
+	padding: 0;
+}
+
+label.disabled span.required
+{
+	color: #aaaaaa;
+}
+
+.error, .field-validation-error, .input-validation-error
+{
+	color: Red !important;
+}
+
+label.error
+{
+	width: auto;	
+}
+
+input.error, textarea.error, select.error, input.input-validation-error, textarea.input-validation-error, select.input-validation-error, div.error
+{
+	border: thin solid red;
+}
+
+div.buttons
+{
+	border-top: 1px dotted #999999;
+	margin: 10px 0;
+}
+
+div.validation-summary-errors
+{
+	color: Red;	
+}
+
+input.login
+{
+	width: 250px;	
+}
+
+input.search
+{
+	width: 300px;	
+}
+
+input.file
+{
+	height: auto;
+	width: auto;
+}
+
+input.datepicker
+{
+	width: 100px;	
+}
+
+input.check
+{
+	width: auto;	
+}
+
+input.unaccessed
+{
+	color: #a3a3a3;	
+}
+
+fieldset.withborder
+{
+	margin: 0 0 10px 0; 
+	padding:10px 20px; 
+	border: solid 1px #D3D3D3;
+}
+
+.form-table div.form-row
+{
+	margin-bottom: 2px;	
+}
+
+span.help-icon
+{
+	background-color: #C8400E;
+	font-weight: bold;
+	color: White;
+	padding: 1px 4px;
+	border-radius: 3px;
+	cursor: help;
+	font-size: 12px;
+	line-height: 14px;
+}
+
+/* JEIP edit-in-place */
+
+form.inline-jeip
+{
+	display: inline;	
+}
+
+.jeip-mouseover, .jeip-mouseover *
+{
+	background-color: #FFFFCC;
+}
+
+h2 form.inline-jeip input
+{
+	font-size: 20px;
+	font-weight: bold;
+	height: 22px;
+	margin: 0 10px 0 0;
+}
+
+h2 form.inline-jeip button
+{
+	vertical-align: top;
+}
+
+/* Split window */
+
+div.split
+{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+div.split div.left
+{
+	float: left;
+	width: 470px;
+	border-right: 1px dotted #C3C3C3;
+	height: 100%;
+	padding: 5px 10px 0 0;
+}
+
+div.split div.right
+{
+	float: left;
+	border-left: 1px dotted #C3C3C3;
+	height: 100%;
+	padding: 5px 0 0 10px;
+	width: 469px;
+	margin-left: -1px;
+}
+
+
+/* Miscellaneous */
+
+.link { cursor: pointer; color: #C8400E; }
+
+.link:hover { text-decoration: underline; }
+
+img.ui-datepicker-trigger { cursor: pointer; }
+
+
+/* Study display */
+
+div.fieldset
+{
+	margin: 10px 0 20px 0; 
+	padding:10px 20px; 
+	border: solid 1px #D3D3D3;
+}
+
+div.fieldset span.legend
+{
+	display:inline-block;
+	position:relative;
+	top:-19px;
+	background-color:#fff;
+	padding: 0 5px;
+}
+
+/* Study publications */
+
+div#pubmed-search-results
+{
+	width: 900px;
+}
+
+div#pubmed-results-list
+{
+	margin-right: 10px;	
+}
+
+/* Lists */
+
+ul.iconed-list
+{
+	list-style-type: none;
+	list-style-image: none;	
+	margin: 0;
+	padding: 0;
+}
+
+ul.iconed-list li
+{
+	position: relative;
+	padding-left: 26px;
+	overflow: hidden;
+}
+
+ul.iconed-list li img, ul.iconed-list li input
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+
+ul.deletable-list
+{
+	list-style-type: none;
+	list-style-image: none;	
+	margin: 0;
+	padding: 0;
+}
+
+ul.deletable-list li
+{
+	position: relative;
+	padding: 2px 26px 2px 2px;
+	margin: 4px 0;
+	overflow: hidden;
+}
+
+ul.deletable-list li:hover
+{
+	background-color: #e8e8e8;
+}
+
+ul.deletable-list li img
+{
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	margin: 0;
+	padding: 0;
+}
+
+ul.compact li p
+{
+	padding: 0;	
+}
+
+ul.meshterms
+{
+	list-style-type: none;
+	list-style-image: none;	
+	margin: 0;
+	padding: 0;	
+}
+
+ul.meshterms li
+{
+	padding: 0 0 1px 5px;	
+}
+
+ul.arrowed
+{
+	list-style: none;
+	margin-left: 0;
+}
+
+ul.arrowed li
+{
+	background:url(/Images/ai-right-bg.gif) no-repeat left 2px; 	
+	padding-left: 15px;
+}
+
+ul.arrowed li a
+{
+	font-size: 100%;
+	font-weight: bold;	
+}
+
+ul.arrowed li ul li
+{
+	background: none;	
+}
+
+/* *******************************************************
+		Pager
+ ********************************************************* */
+
+.pager 
+{
+	margin:5px 3px;
+	padding:3px;
+}
+
+.pager .disabled 
+{
+	border:1px solid #ddd;
+	color:#999;
+	margin-top:4px;
+	padding:3px;
+	text-align:center;
+}
+
+.pager .current 
+{
+	background-color:#C8400E;
+	border:1px solid #ddd;
+	font-weight:bold;
+	margin-top:4px;
+	padding:3px 5px;
+	text-align:center;
+}
+
+.pager span, .pager a
+{
+	margin: 4px 3px;
+	border:1px solid #c0c0c0;
+	padding:3px 5px;
+	text-align:center;
+	text-decoration:none;
+}
+
+
+.ui-autocomplete-loading {
+    background: url("/Images/indicator.gif") no-repeat scroll right center white;
+}
+
+div#by-data-item
+{
+	height: 350px;
+	width: 500px;	
+}
+
+div.info
+{
+	background-color: #eeeeee;
+	border: 1px dotted #d3d3d3;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+div.description
+{
+	font-style: italic;
+	font-size: 13px;
+	line-height: 15px;	
+}
+
+p.journal
+{
+	font-size: 12px;	
+}
+
+#page-body h2.study-name
+{
+	width: 700px;
+}
+
+#last-updated
+{
+	display: inline;
+	font: italic normal normal 14px/16px Arial,sans-serif;
+}
+
+#edit-study
+{
+	margin-top: -4px;
+}
+
+#edit-study-span
+{
+	padding-left: 10px;	
+}
+
+#study-update
+{
+	position: absolute;
+	top: -5px;
+	right: 0;		
+	background-color: White;
+	padding: 8px 0;
+}
+
+.disease-areas td
+{
+	width: 192px;	
+	height: 100px;
+	border-bottom: 1px dotted #e3e3e3;
+}
+
+.obfuscated-email { unicode-bidi: bidi-override; direction: rtl; }
+
+div.topborder
+{
+	border-top: 1px dotted #C3C3C3;	
+	margin-top: 10px;
+	padding-top: 8px;
+}
+
+div.bottom-bar
+{
+	position: fixed;
+	bottom: 0px;
+	background-color: White;
+	width:960px;
+	z-index: 100;	
+	padding-bottom: 12px;
+}
+
+.above-bottom-bar
+{
+	margin-bottom: 54px;	
+}
+
+div#home-search
+{
+	width: 225px;
+	float: right;
+	margin-left: 20px;
+}
+
+div#home-search-top
+{
+	height: 50px;
+	color:#666;
+	font-size:16px;	
+}
+
+div#home-search-bottom
+{
+	background:url(/Images/find-textbox-bg.gif) top left no-repeat;
+	height: 35px;
+    padding: 6px 5px 40px 6px;
+    width: 192px;	
+}
+
+div#home-search-bottom .home-search-button{
+	vertical-align:middle;
+	border:0;
+	background:url(/Images/but-go.gif) top left no-repeat;
+	width:29px;
+	height:24px;
+	margin: 0;
+	cursor: pointer;
+}
+
+input#home-search-textbox
+{
+	height: 16px;
+	width: 155px;
+	border:0;
+	vertical-align:middle;
+}
+
+
+/* Time points vs data fields table */
+
+table.data-items
+{
+	table-layout: fixed;
+	width: 470px;	
+}
+	
+table.data-items th
+{
+	text-align: left;
+	font-weight: normal;
+}
+	
+table.data-items th.tp-check, table.data-items td.tp-check
+{
+	font-size: 10px;
+    line-height: 10px;
+	width: 20px;	
+}
+
+table.data-items th.tp-check span
+{
+	display: block;
+	width: 0.8em;	
+}
+
+table.data-items th.del-btn, table.data-items td.del-btn
+{
+	width: 20px;
+	padding-right: 0;
+}
+
+table.data-items input
+{
+	padding: 0;	
+	margin: 2px 0 0 0;
+	width: auto;
+	height: auto;
+}
+
+table.data-items tr#time-point-row th
+{
+	vertical-align: bottom;	
+}
+
+table.data-items tr#select-all-row
+{
+	border-bottom: 1px dotted #c3c3c3;
+}
+
+table.data-items tr#select-all-row th
+{
+	padding-bottom: 5px;
+}
+
+table.data-items tr td
+{
+	padding-bottom: 0;
+}
+
+table.data-items tr td img
+{
+	margin-top: 4px;
+}
+
+table.data-items tbody tr.first td
+{
+	padding-top: 5px;
+}
+
+table.data-items tbody.highlight tr:hover
+{
+	background-color: #e8e8e8;
+}
+
+table.data-items tr.disease-area
+{
+	font-weight: bold;	
+}
+
+table.data-items tr.category
+{
+	font-style: italic;	
+}
+
+div#tree .error a
+{
+	color: Red !important;	
+}
+
+span.da-error-message
+{
+	margin-left: 1em;
+	font-weight: normal;
+	font-style: italic;	
+}
+
+table tr.hidden
+{
+	display: none;	
+}
+
+div#study-list
+{
+	margin-bottom: 20px;
+}
+
+img.progress
+{
+	margin-left: 15px;
+}
+
+/*  Users.aspx */
+
+.unvalidated-email 
+{
+    color: Red;
+}
