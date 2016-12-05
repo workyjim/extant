@@ -34,7 +34,7 @@ namespace Extant.Web.Models
         [HelpText("Any other names that the study is commonly known as, abbrevations etc.")]
         public string StudySynonyms { get; set; }
 
-        [Url]
+        [DataAnnotationsExtensions.Url]
         [Display(Name = "Study Website")]
         [HelpText("The full address of the study's website (optional)")]
         public string StudyWebsite { get; set; }

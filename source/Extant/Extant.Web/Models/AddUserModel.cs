@@ -34,7 +34,7 @@ namespace Extant.Web.Models
 
         [Required]
         [Display(Name = "Confirm Password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
         public IEnumerable<DiseaseAreaBasicModel> AllDiseaseAreas { get; set; }
