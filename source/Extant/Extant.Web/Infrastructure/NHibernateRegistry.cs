@@ -6,7 +6,8 @@
 using System.Configuration;
 using Extant.Data;
 using NHibernate;
-using StructureMap.Configuration.DSL;
+using StructureMap;
+using StructureMap.Web;
 
 namespace Extant.Web.Infrastructure
 {

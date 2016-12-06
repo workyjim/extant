@@ -1,6 +1,6 @@
 using DataAnnotationsExtensions.ClientValidation;
 
-[assembly: WebActivator.PreApplicationStartMethod(typeof(Extant.Web.App_Start.RegisterClientValidationExtensions), "Start")]
+[assembly: WebActivatorEx.PostApplicationStartMethod(typeof(Extant.Web.App_Start.RegisterClientValidationExtensions), "Start")]
  
 namespace Extant.Web.App_Start {
     public static class RegisterClientValidationExtensions {
