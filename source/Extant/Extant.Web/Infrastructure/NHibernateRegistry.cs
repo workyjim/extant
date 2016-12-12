@@ -19,7 +19,6 @@ namespace Extant.Web.Infrastructure
             var luceneFolder = ConfigurationManager.AppSettings["Lucene.Net.lockdir"];
 
             For<ICurrentUser>()
-                .HybridHttpOrThreadLocalScoped()
                 .Use<HttpUser>();
 
             For<ISessionFactory>()
@@ -27,11 +26,9 @@ namespace Extant.Web.Infrastructure
                 .Use(x => ExtantSessionFactory.GetSessionFactory(connectionString, luceneFolder));
 
             For<ISession>()
-                .HybridHttpOrThreadLocalScoped()
                 .Use(x => x.GetInstance<ISessionFactory>().OpenSession());
 
             For<IUnitOfWork>()
-                .HybridHttpOrThreadLocalScoped()
                 .Use<UnitOfWork>();
         }
     }

@@ -43,9 +43,22 @@ namespace Extant.Web
             log4net.Config.XmlConfigurator.Configure();
         }
 
+        protected void Application_BeginRequest()
+        {
+
+            StructureMapDependencyResolver r = (StructureMapDependencyResolver)DependencyResolver.Current;
+            IContainer main = (IContainer)DependencyResolver.Current.GetService(typeof(IContainer));
+
+            // create a nested container for this httpcontext which will be used to resolve dependencies
+            // this allows StructureMap dependecies to use standard transient scoping instead of special http scoping.
+            HttpContext.Current.Items[StructureMapDependencyResolver.ScopedContainerKey] = main.GetNestedContainer();
+        }
+
         protected void Application_EndRequest()
         {
-            ObjectFactory.ReleaseAndDisposeAllHttpScopedObjects();
+            // explicitly dispose of nexted container at end of request
+            IContainer nested = (IContainer)HttpContext.Current.Items[StructureMapDependencyResolver.ScopedContainerKey];
+            nested.Dispose();
         }
     }
 }

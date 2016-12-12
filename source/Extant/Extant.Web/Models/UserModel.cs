@@ -5,7 +5,6 @@
 //-----------------------------------------------------------------------
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using DataAnnotationsExtensions;
 
 namespace Extant.Web.Models
 {
@@ -16,7 +15,7 @@ namespace Extant.Web.Models
         public string UserName { get; set; }
 
         [Required]
-        [Email]
+        [EmailAddress]
         [Display(Name = "Email address")]
         public string Email { get; set; }
 

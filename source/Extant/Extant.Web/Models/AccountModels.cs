@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Globalization;
-using System.Web.Mvc;
-using System.Web.Security;
-using DataAnnotationsExtensions;
 using Extant.Data.Entities;
 using Extant.Web.Infrastructure;
 
@@ -53,7 +48,7 @@ namespace Extant.Web.Models
         public string Name { get; set; }
 
         [Required]
-        [Email]
+        [EmailAddress]
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email address")]
         [HelpText("Your email address; you will use this to login with")]

@@ -18,7 +18,7 @@ namespace Extant.Web.Infrastructure
 
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            filterContext.HttpContext.Items.Add(UowKey, ObjectFactory.GetInstance<IUnitOfWork>());
+            filterContext.HttpContext.Items.Add(UowKey, (IUnitOfWork) DependencyResolver.Current.GetService(typeof(IUnitOfWork)));
         }
 
         public override void OnActionExecuted(ActionExecutedContext filterContext)

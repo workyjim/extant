@@ -75,7 +75,7 @@ namespace Extant.Web.Infrastructure
 
         protected bool CanDeleteStudy(StudyRequest request)
         {
-            var userRepo = ObjectFactory.GetInstance<IUserRepository>();
+            var userRepo = (IUserRepository) DependencyResolver.Current.GetService(typeof(IUserRepository));
             return request.IsAdministrator || userRepo.CanDeleteStudy(request.StudyId, request.Username, HubLeadRole);
         }
 

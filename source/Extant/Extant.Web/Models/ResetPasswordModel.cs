@@ -4,8 +4,6 @@
 // </copyright>
 //-----------------------------------------------------------------------
 using System.ComponentModel.DataAnnotations;
-using System.Web.Mvc;
-using DataAnnotationsExtensions;
 
 namespace Extant.Web.Models
 {
@@ -14,7 +12,7 @@ namespace Extant.Web.Models
         public string Code { get; set; }
 
         [Required]
-        [Email]
+        [EmailAddress]
         public string Email { get; set; }
 
         [Required]

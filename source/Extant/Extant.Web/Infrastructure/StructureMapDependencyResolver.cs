@@ -15,19 +15,35 @@ namespace Extant.Web.Infrastructure
     {
         private readonly IContainer _container;
 
+        private IContainer getCurrentContainer()
+        {
+            // detects if a context-scoped nested container is available; if not uses the global container.
+            // using this methods of scoping allows all registrations to be transient or singleton.
+            return (IContainer) (System.Web.HttpContext.Current.Items[ScopedContainerKey] ?? _container);
+        }
+        
+
         public StructureMapDependencyResolver(IContainer container)
         {
             _container = container;
         }
 
+        // context scoping key for per request nested containers.
+        public const string ScopedContainerKey = "StructureMapRequestScopedContainer";
+
         public object GetService(Type serviceType)
         {
-            object instance = _container.TryGetInstance(serviceType);
+
+            IContainer current = getCurrentContainer();
+            
+            if (serviceType == typeof(IContainer)) return current;
+
+            object instance = current.TryGetInstance(serviceType);
 
             if (instance == null && !serviceType.IsAbstract)
             {
-                _container.Configure(c => c.AddType(serviceType, serviceType));
-                instance = _container.TryGetInstance(serviceType);
+                current.Configure(c => c.AddType(serviceType, serviceType));
+                instance = current.TryGetInstance(serviceType);
             }
 
             return instance;
@@ -35,7 +51,7 @@ namespace Extant.Web.Infrastructure
 
         public IEnumerable<object> GetServices(Type serviceType)
         {
-            return _container.GetAllInstances(serviceType).Cast<object>();
+            return getCurrentContainer().GetAllInstances(serviceType).Cast<object>();
         }
     }
 }

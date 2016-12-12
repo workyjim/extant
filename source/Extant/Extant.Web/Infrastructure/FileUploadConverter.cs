@@ -10,9 +10,9 @@ using Extant.Data.Entities;
 
 namespace Extant.Web.Infrastructure
 {
-    public class FileUploadConverter : TypeConverter<HttpPostedFileBase, FileUpload>
+    public class FileUploadConverter : ITypeConverter<HttpPostedFileBase, FileUpload>
     {
-        protected override FileUpload ConvertCore(HttpPostedFileBase source)
+        public FileUpload Convert(HttpPostedFileBase source, FileUpload destination, ResolutionContext context)
         {
             if (null != source && source.ContentLength > 0)
             {
