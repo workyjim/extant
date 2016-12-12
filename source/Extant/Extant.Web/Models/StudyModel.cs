@@ -7,7 +7,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Web;
-using DataAnnotationsExtensions;
 using Extant.Data.Entities;
 using Extant.Web.Infrastructure;
 
@@ -55,12 +54,12 @@ namespace Extant.Web.Models
         [HelpText("The status of the study in terms of recruitment and follow up of patients")]
         public int StudyStatus { get; set; }
 
-        [Integer]
+        //[Integer]
         [Display(Name = "Recruitment Target")]
         [HelpText("The number of patients that is planned to be recruited to the study.")]
         public int? RecruitmentTarget { get; set; }
 
-        [Integer]
+        //[Integer]
         [Display(Name="Participants Recruited")]
         [HelpText("The number of patients that have been recruited to the study to date. This should be updated periodically.")]
         public int? ParticipantsRecruited { get; set; }
@@ -85,7 +84,7 @@ namespace Extant.Web.Models
         [Display(Name = "Is the study adopted on the UKCRN Portfolio?")]
         public bool OnPortfolio { get; set; }
 
-        [Integer]
+        //[Integer]
         [RequiredIf("OnPortfolio", true)]
         [Display(Name = "UKCRN ID")]
         [HelpText("The ID of the study in the UKCRN Portfolio.")]
@@ -109,7 +108,7 @@ namespace Extant.Web.Models
         public string ContactPhone { get; set; }
 
         [Required]
-        [Email]
+        [EmailAddress]
         [StringLength(255)]
         [Display(Name = "Email")]
         [HelpText("The email address of the primary contact for obtaining further information on this study.")]

@@ -10,7 +10,7 @@ using Extant.Data.Repositories;
 
 namespace Extant.Web.Infrastructure
 {
-    public class IntToDiseaseAreaConverter : TypeConverter<int, DiseaseArea>
+    public class IntToDiseaseAreaConverter : ITypeConverter<int, DiseaseArea>
     {
 
         private readonly IDiseaseAreaRepository DiseaseAreaRepo;
@@ -20,7 +20,7 @@ namespace Extant.Web.Infrastructure
             DiseaseAreaRepo = diseaseAreaRepo;
         }
 
-        protected override DiseaseArea ConvertCore(int source)
+        public DiseaseArea Convert(int source, DiseaseArea destination, ResolutionContext context)
         {
             return DiseaseAreaRepo.Get(source);
         }

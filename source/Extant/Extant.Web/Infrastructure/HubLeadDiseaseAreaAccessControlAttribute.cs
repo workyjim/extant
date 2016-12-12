@@ -68,7 +68,7 @@ namespace Extant.Web.Infrastructure
 
         protected bool IsHubLeadOrAdmin(DiseaseAreaRequest request)
         {
-            var userRepo = ObjectFactory.GetInstance<IUserRepository>();
+            var userRepo = (IUserRepository) DependencyResolver.Current.GetService(typeof(IUserRepository));
             var user = userRepo.GetByEmail(request.Username);
             return user.Roles.Select(r => r.RoleName).Contains(Constants.AdministratorRole) || 
                 (user.Roles.Select(r => r.RoleName).Contains(Constants.HubLeadRole) && user.DiseaseAreas.Select(da => da.Id).Contains(request.DiseaseAreaId));

@@ -5,8 +5,6 @@
 //-----------------------------------------------------------------------
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Web.Mvc;
-using DataAnnotationsExtensions;
 
 namespace Extant.Web.Models
 {
@@ -17,7 +15,7 @@ namespace Extant.Web.Models
         public string UserName { get; set; }
 
         [Required]
-        [Email]
+        [EmailAddress]
         public string Email { get; set; }
 
         public int[] DiseaseAreas { get; set; }
@@ -34,7 +32,7 @@ namespace Extant.Web.Models
 
         [Required]
         [Display(Name = "Confirm Password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
         public IEnumerable<DiseaseAreaBasicModel> AllDiseaseAreas { get; set; }

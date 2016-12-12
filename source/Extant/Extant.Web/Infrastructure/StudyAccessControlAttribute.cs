@@ -61,7 +61,7 @@ namespace Extant.Web.Infrastructure
 
         protected bool IsOwnerOrHubLead(StudyRequest request)
         {
-            var userRepo = ObjectFactory.GetInstance<IUserRepository>();
+            var userRepo = (IUserRepository) DependencyResolver.Current.GetService(typeof(IUserRepository));
             return userRepo.CanEditStudy(request.StudyId, request.Username, HubLeadRole);
         }
 

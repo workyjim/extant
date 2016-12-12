@@ -19,12 +19,12 @@ namespace Extant.Web.Infrastructure
 
         protected IUserRepository UserRepo
         {
-            get { return ObjectFactory.GetInstance<IUserRepository>(); }
+            get { return (IUserRepository) System.Web.Mvc.DependencyResolver.Current.GetService(typeof(IUserRepository)); }
         }
 
         protected IRoleRepository RoleRepo
         {
-            get { return ObjectFactory.GetInstance<IRoleRepository>(); }
+            get { return (IRoleRepository) System.Web.Mvc.DependencyResolver.Current.GetService(typeof(IRoleRepository)); }
         }
 
         public override void Initialize(string name, System.Collections.Specialized.NameValueCollection config)

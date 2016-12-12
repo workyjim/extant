@@ -24,7 +24,7 @@ namespace Extant.Web.Infrastructure
 
         protected IUserRepository UserRepo
         {
-            get { return ObjectFactory.GetInstance<IUserRepository>(); }
+            get { return (IUserRepository) System.Web.Mvc.DependencyResolver.Current.GetService(typeof(IUserRepository)); }
         }
 
         public override void Initialize(string name, System.Collections.Specialized.NameValueCollection config)

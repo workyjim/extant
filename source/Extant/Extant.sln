@@ -1,6 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{C4CCAFC6-B235-4429-B673-D760EB60F92E}"
+	ProjectSection(SolutionItems) = preProject
+		CommonAssemblyInfo.cs = CommonAssemblyInfo.cs
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extant.Web", "Extant.Web\Extant.Web.csproj", "{2FC87E58-5E09-4481-A8A0-31B7C7B86E02}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extant.Data", "Extant.Data\Extant.Data.csproj", "{EC85191D-F81F-472C-8682-DE6A2E8A6C96}"
@@ -10,11 +17,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extant.Tests.Unit", "Extant.Tests.Unit\Extant.Tests.Unit.csproj", "{A9E8CFB2-B834-4D4E-8244-4F159DA58C20}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extant.Pubmed", "Extant.Pubmed\Extant.Pubmed.csproj", "{0E8059E1-250E-4E2A-B291-46F14B51E9F2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{C4CCAFC6-B235-4429-B673-D760EB60F92E}"
-	ProjectSection(SolutionItems) = preProject
-		CommonAssemblyInfo.cs = CommonAssemblyInfo.cs
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

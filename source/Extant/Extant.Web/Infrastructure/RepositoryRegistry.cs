@@ -5,7 +5,7 @@
 //-----------------------------------------------------------------------
 using Extant.Data.Entities;
 using Extant.Data.Repositories;
-using StructureMap.Configuration.DSL;
+using StructureMap;
 
 namespace Extant.Web.Infrastructure
 {

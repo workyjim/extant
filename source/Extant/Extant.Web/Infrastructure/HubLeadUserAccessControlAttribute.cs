@@ -67,7 +67,7 @@ namespace Extant.Web.Infrastructure
 
         protected bool IsAdminOrHubLead(UserRequest request)
         {
-            var userRepo = ObjectFactory.GetInstance<IUserRepository>();
+            var userRepo = (IUserRepository) DependencyResolver.Current.GetService(typeof(IUserRepository));
             var user = userRepo.GetByEmail(request.Username);
             return user.Roles.Select(r => r.RoleName).Contains(Constants.AdministratorRole) || 
                 userRepo.CanEditUser(request.UserId, request.Username, Constants.HubLeadRole);
